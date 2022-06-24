@@ -15,8 +15,6 @@ document.getElementById('deposit-button').addEventListener('click', function(){
 
 //for balance
 
-  
-  
     const mainBalance=document.getElementById('balance-total');
      const previousTakaMainBalance=mainBalance.innerText;
  
@@ -27,23 +25,36 @@ document.getElementById('deposit-button').addEventListener('click', function(){
  
     mainBalance.innerText=updateValueBalance;
    
-    
-
-
-
-
 //  update money balance
 
-
-
-
-
-
-
-
-
-
   depositInput.value='';
- 
+
+
+
+})
+
+
+// withdraw balance
+
+
+document.getElementById('withdraw-button').addEventListener('click',function(){
+  
+
+  const withdreawInput=document.getElementById('withdraw-input');
+  const currentInput= parseFloat(withdreawInput.value) ;
+
+
+  const withdrawTaka= document.getElementById('withdraw-taka')
+   const withdrawTakaText= withdrawTaka.innerText;
+   const withdrawTakabalance=parseFloat(withdrawTakaText);
+
+   const mainBalanceabc= withdrawTakabalance+currentInput;
+
+   withdrawTaka.innerText=mainBalanceabc;
+
+
+
+   withdreawInput.value='';
+
 
 })
