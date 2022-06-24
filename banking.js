@@ -51,6 +51,14 @@ document.getElementById('withdraw-button').addEventListener('click',function(){
    const mainBalanceabc= withdrawTakabalance+currentInput;
 
    withdrawTaka.innerText=mainBalanceabc;
+   ////////////////////////////
+
+    const balanceUpdated=document.getElementById('balance-total')
+    const balanceTakaParse=parseFloat(balanceUpdated.innerText);
+
+    CurrentMainBalanceabc=balanceTakaParse-currentInput;
+
+    balanceUpdated.innerText=CurrentMainBalanceabc;
 
 
 
