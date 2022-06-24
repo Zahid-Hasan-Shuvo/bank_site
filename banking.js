@@ -1,9 +1,48 @@
 document.getElementById('deposit-button').addEventListener('click', function(){
  const depositInput=document.getElementById('deposit-input');
-  depositValue=depositInput.value;
+   const CurrentDepositValue=parseFloat(depositInput.value);
  
- const depositTaka=document.getElementById('deposit-taka');
- depositTaka.innerText=depositValue;
+   const mainValue=document.getElementById('deposit-taka')
+    const previousTaka=mainValue.innerText;
+
+   const previousValue=parseFloat(previousTaka);
+
+
+   const updateValue= CurrentDepositValue+previousValue;
+
+   mainValue.innerText=updateValue;
+   
+
+//for balance
+
+  
+  
+    const mainBalance=document.getElementById('balance-total');
+     const previousTakaMainBalance=mainBalance.innerText;
+ 
+    const previousValueBalance=parseFloat(previousTakaMainBalance);
+ 
+ 
+    const updateValueBalance= CurrentDepositValue+previousValueBalance;
+ 
+    mainBalance.innerText=updateValueBalance;
+   
+    
+
+
+
+
+//  update money balance
+
+
+
+
+
+
+
+
+
+
   depositInput.value='';
  
 
